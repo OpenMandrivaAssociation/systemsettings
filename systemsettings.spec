@@ -5,7 +5,7 @@
 
 Name: systemsettings
 Version: 5.1.1
-Release: 1
+Release: 2
 Source0: http://ftp5.gwdg.de/pub/linux/kde/%{stable}/plasma/%{plasmaver}/%{name}-%{version}.tar.xz
 Summary: KDE Frameworks 5 Systemsettings framework
 URL: http://kde.org/

@@ -42,7 +42,8 @@ Development files for developing KDE Plasma 5 System Settings plugins
 
 %prep
 %setup -qn %{name}-%{plasmaver}
-%cmake -G Ninja
+%cmake -G Ninja \
+	-DKDE_INSTALL_USE_QT_SYS_PATHS:BOOL=ON
 
 %build
 ninja -C build
@@ -61,7 +62,7 @@ DESTDIR="%{buildroot}" ninja -C build install %{?_smp_mflags}
 %{_datadir}/kservices5/*
 %{_datadir}/applications/kdesystemsettings.desktop
 %{_datadir}/applications/systemsettings.desktop
-%{_libdir}/plugins/*_mode.so
+%{_libdir}/qt5/plugins/*_mode.so
 %doc %{_docdir}/HTML/en/systemsettings
 
 %files -n %{devname}

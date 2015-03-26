@@ -63,7 +63,7 @@ DESTDIR="%{buildroot}" ninja -C build install %{?_smp_mflags}
 %{_datadir}/applications/kdesystemsettings.desktop
 %{_datadir}/applications/systemsettings.desktop
 %{_libdir}/qt5/plugins/*_mode.so
-%doc %{_docdir}/HTML/en/systemsettings
+%doc %{_docdir}/HTML/*/systemsettings
 
 %files -n %{devname}
 %{_includedir}/systemsettingsview

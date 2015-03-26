@@ -4,7 +4,7 @@
 %define plasmaver %(echo %{version} |cut -d. -f1-3)
 
 Name: systemsettings
-Version: 5.2.1
+Version: 5.2.2
 Release: 1
 Source0: http://ftp5.gwdg.de/pub/linux/kde/%{stable}/plasma/%{plasmaver}/%{name}-%{version}.tar.xz
 Summary: KDE Frameworks 5 Systemsettings framework
@@ -26,7 +26,7 @@ BuildRequires: ninja
 Requires: %{libname} = %{EVRD}
 
 %description
-KDE Plasma 5 system settings panel
+KDE Plasma 5 system settings panel.
 
 %libpackage systemsettingsview 3
 
@@ -38,7 +38,7 @@ Requires: %{libname} = %{EVRD}
 Provides: systemsettings-devel = %{EVRD}
 
 %description -n %{devname}
-Development files for developing KDE Plasma 5 System Settings plugins
+Development files for developing KDE Plasma 5 System Settings plugins.
 
 %prep
 %setup -qn %{name}-%{plasmaver}

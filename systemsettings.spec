@@ -6,14 +6,11 @@
 Name: systemsettings
 Version: 5.3.0
 Release: 1
-Source0: http://ftp5.gwdg.de/pub/linux/kde/%{stable}/plasma/%{plasmaver}/%{name}-%{version}.tar.xz
+Source0: http://download.kde.org/%{stable}/plasma/%{plasmaver}/%{name}-%{version}.tar.xz
 Summary: KDE Frameworks 5 Systemsettings framework
 URL: http://kde.org/
 License: GPL
 Group: System/Libraries
-BuildRequires: cmake
-BuildRequires: qmake5
-BuildRequires: extra-cmake-modules5
 BuildRequires: pkgconfig(Qt5Core)
 BuildRequires: cmake(KF5DocTools)
 BuildRequires: cmake(ECM)
@@ -22,7 +19,6 @@ BuildRequires: cmake(KF5I18n)
 BuildRequires: cmake(KF5KHtml)
 BuildRequires: cmake(KF5KDELibs4Support)
 BuildRequires: cmake(KF5KCMUtils)
-BuildRequires: ninja
 Requires: %{libname} = %{EVRD}
 
 %description
@@ -42,14 +38,14 @@ Development files for developing KDE Plasma 5 System Settings plugins.
 
 %prep
 %setup -qn %{name}-%{plasmaver}
-%cmake -G Ninja \
-	-DKDE_INSTALL_USE_QT_SYS_PATHS:BOOL=ON
+%cmake_kde5
 
 %build
-ninja -C build
+%ninja -C build
 
 %install
-DESTDIR="%{buildroot}" ninja -C build install %{?_smp_mflags}
+%ninja_install -C build
+
 %find_lang systemsettings
 
 %files -f systemsettings.lang

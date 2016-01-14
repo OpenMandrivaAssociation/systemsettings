@@ -20,6 +20,7 @@ BuildRequires: cmake(KF5KHtml)
 BuildRequires: cmake(KF5KDELibs4Support)
 BuildRequires: cmake(KF5KCMUtils)
 Requires: %{libname} = %{EVRD}
+Requires: kde-cli-tools
 
 %description
 KDE Plasma 5 system settings panel.

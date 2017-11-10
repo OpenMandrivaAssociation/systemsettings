@@ -21,6 +21,7 @@ BuildRequires: cmake(KF5KDELibs4Support)
 BuildRequires: cmake(KF5KCMUtils)
 BuildRequires: cmake(KF5Activities)
 BuildRequires: cmake(KF5ActivitiesStats)
+BuildRequires: cmake(KF5Kirigami2)
 Requires: %{libname} = %{EVRD}
 Requires: kde-cli-tools
 Requires: khtml

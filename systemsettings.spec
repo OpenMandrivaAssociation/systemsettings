@@ -12,6 +12,7 @@ URL: http://kde.org/
 License: GPL
 Group: System/Libraries
 BuildRequires: pkgconfig(Qt5Core)
+BuildRequires: pkgconfig(Qt5QuickWidgets)
 BuildRequires: cmake(KF5DocTools)
 BuildRequires: cmake(ECM)
 BuildRequires: cmake(Qt5)

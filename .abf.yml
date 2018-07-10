@@ -1,2 +1,4 @@
-sources:
+removed_sources:
   systemsettings-5.12.3.tar.xz: b7e5a7e52613dbee78ba3d3784a075e621294665
+sources:
+  systemsettings-5.12.6.tar.xz: f2dcbfb09e8d416f4b93557d80327632fbaed3ec

@@ -5,7 +5,7 @@
 
 Name: systemsettings
 Version: 5.14.5
-Release: 1
+Release: 2
 Source0: http://download.kde.org/%{stable}/plasma/%{plasmaver}/%{name}-%{version}.tar.xz
 Summary: KDE Frameworks 5 Systemsettings framework
 URL: http://kde.org/
@@ -30,6 +30,7 @@ Requires: %{libname} = %{EVRD}
 Requires: kde-cli-tools
 Requires: khtml
 Requires: kdeclarative
+Requires: kirigami2 >= %{version}
 
 %description
 KDE Plasma 5 system settings panel.

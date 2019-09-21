@@ -26,6 +26,7 @@ BuildRequires: cmake(KF5Package)
 BuildRequires: cmake(KF5Declarative)
 BuildRequires: cmake(KF5Kirigami2)
 BuildRequires: cmake(LibKWorkspace)
+BuildRequires: kdeclarative
 Requires: %{libname} = %{EVRD}
 Requires: kde-cli-tools
 Requires: khtml

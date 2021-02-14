@@ -1,6 +1,5 @@
 %define debug_package %{nil}
 %define stable %([ "`echo %{version} |cut -d. -f3`" -ge 80 ] && echo -n un; echo -n stable)
-%define libname %mklibname systemsettingsview 3
 %define plasmaver %(echo %{version} |cut -d. -f1-3)
 
 Name: systemsettings
@@ -27,7 +26,6 @@ BuildRequires: cmake(KF5Declarative)
 BuildRequires: cmake(KF5Kirigami2)
 BuildRequires: cmake(LibKWorkspace)
 BuildRequires: kdeclarative
-Requires: %{libname} = %{EVRD}
 Requires: kde-cli-tools
 Requires: khtml
 Requires: kdeclarative

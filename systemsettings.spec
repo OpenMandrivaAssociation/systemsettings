@@ -4,7 +4,7 @@
 %define plasmaver %(echo %{version} |cut -d. -f1-3)
 
 Name: systemsettings
-Version: 5.20.5
+Version: 5.21.0
 Release: 1
 Source0: http://download.kde.org/%{stable}/plasma/%{plasmaver}/%{name}-%{version}.tar.xz
 Summary: KDE Frameworks 5 Systemsettings framework
@@ -33,21 +33,11 @@ Requires: khtml
 Requires: kdeclarative
 Requires: kirigami2 >= %{version}
 Conflicts: systemd-kcm < 1.2.1-5
+Obsoletes: %mklibname systemsettingsview 3
+Obsoletes: %mklibname -d systemsettingsview
 
 %description
 KDE Plasma 5 system settings panel.
-
-%libpackage systemsettingsview 3
-
-%define devname %mklibname systemsettingsview -d
-%package -n %{devname}
-Summary: Development files for developing KDE Plasma 5 System Settings plugins
-Group: Development/KDE and Qt
-Requires: %{libname} = %{EVRD}
-Provides: systemsettings-devel = %{EVRD}
-
-%description -n %{devname}
-Development files for developing KDE Plasma 5 System Settings plugins.
 
 %prep
 %autosetup -p1
@@ -75,9 +65,5 @@ Development files for developing KDE Plasma 5 System Settings plugins.
 %{_datadir}/kpackage
 %{_datadir}/applications/kdesystemsettings.desktop
 %{_datadir}/applications/systemsettings.desktop
-%{_libdir}/qt5/plugins/*_mode.so
+%{_libdir}/qt5/plugins/systemsettingsview
 %doc %{_docdir}/HTML/*/systemsettings
-
-%files -n %{devname}
-%{_includedir}/systemsettingsview
-%{_libdir}/libsystemsettingsview.so

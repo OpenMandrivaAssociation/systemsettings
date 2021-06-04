@@ -1,9 +1,8 @@
-%define debug_package %{nil}
 %define stable %([ "`echo %{version} |cut -d. -f3`" -ge 80 ] && echo -n un; echo -n stable)
 %define plasmaver %(echo %{version} |cut -d. -f1-3)
 
 Name: systemsettings
-Version: 5.21.5
+Version: 5.22.0
 Release: 1
 Source0: http://download.kde.org/%{stable}/plasma/%{plasmaver}/%{name}-%{version}.tar.xz
 Summary: KDE Frameworks 5 Systemsettings framework
@@ -50,6 +49,7 @@ KDE Plasma 5 system settings panel.
 %find_lang systemsettings || touch systemsettings.lang
 
 %files -f systemsettings.lang
+%{_libdir}/libsystemsettingsview.so.3
 %{_datadir}/qlogging-categories5/systemsettings.categories
 %{_bindir}/systemsettings5
 %{_datadir}/systemsettings

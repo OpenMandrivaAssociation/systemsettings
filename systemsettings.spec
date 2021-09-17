@@ -2,7 +2,7 @@
 %define plasmaver %(echo %{version} |cut -d. -f1-3)
 
 Name: systemsettings
-Version: 5.22.5
+Version: 5.22.90
 Release: 1
 Source0: http://download.kde.org/%{stable}/plasma/%{plasmaver}/%{name}-%{version}.tar.xz
 Summary: KDE Frameworks 5 Systemsettings framework
@@ -59,9 +59,9 @@ KDE Plasma 5 system settings panel.
 %{_datadir}/kservicetypes5/systemsettingsexternalapp.desktop
 %{_datadir}/kservicetypes5/systemsettingsview.desktop
 %{_datadir}/kxmlgui5/systemsettings
-%{_datadir}/kservices5/*
 %{_datadir}/kpackage
 %{_datadir}/applications/kdesystemsettings.desktop
 %{_datadir}/applications/systemsettings.desktop
 %{_libdir}/qt5/plugins/systemsettingsview
+%{_libdir}/qt5/plugins/kf5/krunner/krunner_systemsettings.so
 %doc %{_docdir}/HTML/*/systemsettings

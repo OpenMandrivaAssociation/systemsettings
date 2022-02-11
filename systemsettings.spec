@@ -1,9 +1,9 @@
-%define stable %([ "`echo %{version} |cut -d. -f3`" -ge 80 ] && echo -n un; echo -n stable)
+%define stable %([ "$(echo %{version} |cut -d. -f3)" -ge 80 ] && echo -n un; echo -n stable)
 %define plasmaver %(echo %{version} |cut -d. -f1-3)
 
 Name: systemsettings
-Version: 5.23.5
-Release: 2
+Version: 5.24.0
+Release: 1
 Source0: http://download.kde.org/%{stable}/plasma/%{plasmaver}/%{name}-%{version}.tar.xz
 Summary: KDE Frameworks 5 Systemsettings framework
 URL: http://kde.org/
@@ -31,8 +31,8 @@ Requires: khtml
 Requires: kdeclarative
 Requires: kirigami2 >= %{version}
 Conflicts: systemd-kcm < 1.2.1-5
-Obsoletes: %mklibname systemsettingsview 3
-Obsoletes: %mklibname -d systemsettingsview
+Obsoletes: %{mklibname systemsettingsview 3} < 5.24.0
+Obsoletes: %{mklibname -d systemsettingsview} < 5.24.0
 
 %description
 KDE Plasma 5 system settings panel.
@@ -50,19 +50,17 @@ KDE Plasma 5 system settings panel.
 %find_lang systemsettings || touch systemsettings.lang
 
 %files -f systemsettings.lang
-%{_libdir}/libsystemsettingsview.so.3
+%{_libdir}/libsystemsettingsview.so.*
 %{_datadir}/qlogging-categories5/systemsettings.categories
+%{_bindir}/systemsettings
 %{_bindir}/systemsettings5
 %{_datadir}/systemsettings
 %{_datadir}/metainfo/org.kde.systemsettings.metainfo.xml
 %{_datadir}/kglobalaccel/systemsettings.desktop
-%{_datadir}/kservicetypes5/systemsettingscategory.desktop
-%{_datadir}/kservicetypes5/systemsettingsexternalapp.desktop
-%{_datadir}/kservicetypes5/systemsettingsview.desktop
+%{_datadir}/kservicetypes5/*.desktop
 %{_datadir}/kxmlgui5/systemsettings
 %{_datadir}/kpackage
-%{_datadir}/applications/kdesystemsettings.desktop
-%{_datadir}/applications/systemsettings.desktop
+%{_datadir}/applications/*.desktop
 %{_libdir}/qt5/plugins/systemsettingsview
 %{_libdir}/qt5/plugins/kf5/krunner/krunner_systemsettings.so
 %doc %{_docdir}/HTML/*/systemsettings

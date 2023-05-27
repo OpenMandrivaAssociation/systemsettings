@@ -27,6 +27,9 @@ BuildRequires: cmake(KF6Package)
 BuildRequires: cmake(KF6Declarative)
 BuildRequires: cmake(KF6Kirigami2)
 BuildRequires: cmake(KF6Runner)
+BuildRequires: cmake(KF6Auth)
+BuildRequires: cmake(KF6ItemModels)
+BuildRequires: cmake(KF6Notifications)
 Requires: plasma6-kde-cli-tools
 Requires: kirigami2 >= %{version}
 

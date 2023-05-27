@@ -26,7 +26,6 @@ BuildRequires: cmake(KF6ActivitiesStats)
 BuildRequires: cmake(KF6Package)
 BuildRequires: cmake(KF6Declarative)
 BuildRequires: cmake(KF6Kirigami2)
-BuildRequires: cmake(LibKWorkspace) >= 5.27.80
 BuildRequires: cmake(KF6Runner)
 BuildRequires: kdeclarative
 Requires: kde-cli-tools

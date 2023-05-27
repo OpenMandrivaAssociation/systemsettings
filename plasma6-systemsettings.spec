@@ -32,7 +32,6 @@ BuildRequires: cmake(KF6ItemModels)
 BuildRequires: cmake(KF6Notifications)
 BuildRequires: cmake(LibKWorkspace) >= 5.27.80
 Requires: plasma6-kde-cli-tools
-Requires: kirigami2 >= %{version}
 
 %description
 KDE Plasma 6 system settings panel.

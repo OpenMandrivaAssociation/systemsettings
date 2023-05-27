@@ -27,12 +27,8 @@ BuildRequires: cmake(KF6Package)
 BuildRequires: cmake(KF6Declarative)
 BuildRequires: cmake(KF6Kirigami2)
 BuildRequires: cmake(KF6Runner)
-BuildRequires: kdeclarative
-Requires: kde-cli-tools
-Requires: khtml
-Requires: kdeclarative
+Requires: plasma6-kde-cli-tools
 Requires: kirigami2 >= %{version}
-Conflicts: systemd-kcm < 1.2.1-5
 
 %description
 KDE Plasma 6 system settings panel.

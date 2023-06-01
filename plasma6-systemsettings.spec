@@ -2,9 +2,9 @@
 %define plasmaver %(echo %{version} |cut -d. -f1-3)
 %define git 20230527
 
-Name: systemsettings
+Name: plasma6-systemsettings
 Version: 5.240.0
-Release: 1
+Release: %{?git:0.%{git}.}1
 %if 0%{?git:1}
 Source0:	https://invent.kde.org/plasma/systemsettings/-/archive/master/systemsettings-master.tar.bz2#/systemsettings-%{git}.tar.bz2
 %else

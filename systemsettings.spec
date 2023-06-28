@@ -23,7 +23,7 @@ BuildRequires: cmake(KF5ActivitiesStats)
 BuildRequires: cmake(KF5Package)
 BuildRequires: cmake(KF5Declarative)
 BuildRequires: cmake(KF5Kirigami2)
-BuildRequires: cmake(LibKWorkspace)
+BuildRequires: cmake(LibKWorkspace) < 5.27.50
 BuildRequires: cmake(KF5Runner)
 BuildRequires: kdeclarative
 Requires: kde-cli-tools

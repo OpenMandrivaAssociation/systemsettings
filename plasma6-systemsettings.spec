@@ -31,6 +31,7 @@ BuildRequires: cmake(KF6Auth)
 BuildRequires: cmake(KF6ItemModels)
 BuildRequires: cmake(KF6Notifications)
 BuildRequires: cmake(LibKWorkspace) >= 5.27.80
+BuildRequires: plasma6-xdg-desktop-portal-kde
 Requires: plasma6-kde-cli-tools
 
 %description

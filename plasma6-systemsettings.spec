@@ -4,7 +4,7 @@
 
 Name: plasma6-systemsettings
 Version: 5.27.80
-Release: %{?git:0.%{git}.}1
+Release: %{?git:0.%{git}.}2
 %if 0%{?git:1}
 Source0:	https://invent.kde.org/plasma/systemsettings/-/archive/master/systemsettings-master.tar.bz2#/systemsettings-%{git}.tar.bz2
 %else

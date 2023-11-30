@@ -3,8 +3,8 @@
 #define git 20231104
 
 Name: plasma6-systemsettings
-Version: 5.27.80
-Release: %{?git:0.%{git}.}2
+Version: 5.90.0
+Release: %{?git:0.%{git}.}1
 %if 0%{?git:1}
 Source0:	https://invent.kde.org/plasma/systemsettings/-/archive/master/systemsettings-master.tar.bz2#/systemsettings-%{git}.tar.bz2
 %else
@@ -21,8 +21,8 @@ BuildRequires: cmake(ECM)
 BuildRequires: cmake(Qt6)
 BuildRequires: cmake(KF6I18n)
 BuildRequires: cmake(KF6KCMUtils)
-BuildRequires: cmake(KF6Activities)
-BuildRequires: cmake(KF6ActivitiesStats)
+BuildRequires: cmake(PlasmaActivities)
+BuildRequires: cmake(PlasmaActivitiesStats)
 BuildRequires: cmake(KF6Package)
 BuildRequires: cmake(KF6Declarative)
 BuildRequires: cmake(KF6Kirigami2)

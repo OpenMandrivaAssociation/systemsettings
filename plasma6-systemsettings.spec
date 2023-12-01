@@ -35,7 +35,6 @@ BuildRequires: cmake(KF6KIO)
 BuildRequires: cmake(KF6Service)
 BuildRequires: cmake(KF6DBusAddons)
 BuildRequires: cmake(LibKWorkspace) >= 5.27.80
-BuildRequires: plasma6-xdg-desktop-portal-kde
 Requires: plasma6-kde-cli-tools
 
 %description

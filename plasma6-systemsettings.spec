@@ -3,7 +3,7 @@
 #define git 20231104
 
 Name: plasma6-systemsettings
-Version: 5.91.0
+Version: 5.92.0
 Release: %{?git:0.%{git}.}1
 %if 0%{?git:1}
 Source0:	https://invent.kde.org/plasma/systemsettings/-/archive/master/systemsettings-master.tar.bz2#/systemsettings-%{git}.tar.bz2

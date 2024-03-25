@@ -6,7 +6,7 @@
 
 Name: plasma6-systemsettings
 Version: 6.0.2
-Release: %{?git:0.%{git}.}2
+Release: %{?git:0.%{git}.}3
 %if 0%{?git:1}
 Source0:	https://invent.kde.org/plasma/systemsettings/-/archive/%{gitbranch}/systemsettings-%{gitbranchd}.tar.bz2#/systemsettings-%{git}.tar.bz2
 %else
@@ -38,6 +38,7 @@ BuildRequires: cmake(KF6Service)
 BuildRequires: cmake(KF6DBusAddons)
 BuildRequires: cmake(LibKWorkspace) >= 5.27.80
 Requires: plasma6-kde-cli-tools
+Requires: kirigami-addons
 
 %description
 KDE Plasma 6 system settings panel.

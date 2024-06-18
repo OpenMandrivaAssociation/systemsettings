@@ -5,7 +5,7 @@
 %define gitbranchd %(echo %{gitbranch} |sed -e "s,/,-,g")
 
 Name: plasma6-systemsettings
-Version: 6.0.5
+Version: 6.1.0
 Release: %{?git:0.%{git}.}1
 %if 0%{?git:1}
 Source0:	https://invent.kde.org/plasma/systemsettings/-/archive/%{gitbranch}/systemsettings-%{gitbranchd}.tar.bz2#/systemsettings-%{git}.tar.bz2
@@ -39,28 +39,14 @@ BuildRequires: cmake(KF6DBusAddons)
 BuildRequires: cmake(LibKWorkspace) >= 5.27.80
 Requires: plasma6-kde-cli-tools
 Requires: kirigami-addons
+BuildSystem: cmake
+BuildOption: -DBUILD_QCH:BOOL=ON
+BuildOption: -DKDE_INSTALL_USE_QT_SYS_PATHS:BOOL=ON
 
 %description
 KDE Plasma 6 system settings panel.
 
-%prep
-%autosetup -p1 -n systemsettings-%{?git:%{gitbranchd}}%{!?git:%{version}}
-%cmake \
-	-DBUILD_QCH:BOOL=ON \
-	-DBUILD_WITH_QT6:BOOL=ON \
-	-DKDE_INSTALL_USE_QT_SYS_PATHS:BOOL=ON \
-	-G Ninja
-
-%build
-%ninja_build -C build
-
-%install
-%ninja_install -C build
-
-%find_lang systemsettings --all-name --with-html
-
-%files -f systemsettings.lang
-%{_libdir}/libsystemsettingsview.so.*
+%files -f %{name}.lang
 %{_datadir}/qlogging-categories6/systemsettings.categories
 %{_bindir}/systemsettings
 %{_datadir}/systemsettings

@@ -13,7 +13,7 @@ Source0:	https://invent.kde.org/plasma/systemsettings/-/archive/%{gitbranch}/sys
 Source0: http://download.kde.org/%{stable}/plasma/%{plasmaver}/systemsettings-%{version}.tar.xz
 %endif
 Summary: KDE Frameworks 6 Systemsettings framework
-URL: http://kde.org/
+URL: https://kde.org/
 License: GPL
 Group: System/Libraries
 BuildRequires: cmake(Qt6Core)

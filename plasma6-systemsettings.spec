@@ -5,8 +5,8 @@
 %define gitbranchd %(echo %{gitbranch} |sed -e "s,/,-,g")
 
 Name: plasma6-systemsettings
-Version: 6.2.4
-Release: %{?git:0.%{git}.}2
+Version: 6.2.5
+Release: %{?git:0.%{git}.}1
 %if 0%{?git:1}
 Source0:	https://invent.kde.org/plasma/systemsettings/-/archive/%{gitbranch}/systemsettings-%{gitbranchd}.tar.bz2#/systemsettings-%{git}.tar.bz2
 %else

@@ -2,8 +2,8 @@
 %define plasmaver %(echo %{version} |cut -d. -f1-3)
 
 Name: systemsettings
-Version: 5.27.11
-Release: 2
+Version: 5.27.12
+Release: 1
 Source0: http://download.kde.org/%{stable}/plasma/%{plasmaver}/%{name}-%{version}.tar.xz
 Summary: KDE Frameworks 5 Systemsettings framework
 URL: https://kde.org/

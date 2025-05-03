@@ -6,7 +6,7 @@
 
 Name: plasma6-systemsettings
 Version: 6.3.4
-Release: %{?git:0.%{git}.}2
+Release: %{?git:0.%{git}.}3
 %if 0%{?git:1}
 Source0:	https://invent.kde.org/plasma/systemsettings/-/archive/%{gitbranch}/systemsettings-%{gitbranchd}.tar.bz2#/systemsettings-%{git}.tar.bz2
 %else
@@ -42,6 +42,8 @@ Requires: kirigami-addons
 BuildSystem: cmake
 BuildOption: -DBUILD_QCH:BOOL=ON
 BuildOption: -DKDE_INSTALL_USE_QT_SYS_PATHS:BOOL=ON
+# Renamed after 6.0 2025-05-03
+%rename plasma6-systemsettings
 
 %patchlist
 systemsettings-6.3.3-wayland-egl-is-wayland.patch

@@ -4,7 +4,7 @@
 %define gitbranch Plasma/6.0
 %define gitbranchd %(echo %{gitbranch} |sed -e "s,/,-,g")
 
-Name: plasma6-systemsettings
+Name: systemsettings
 Version: 6.4.2
 Release: %{?git:0.%{git}.}1
 %if 0%{?git:1}
@@ -37,7 +37,7 @@ BuildRequires: cmake(KF6KIO)
 BuildRequires: cmake(KF6Service)
 BuildRequires: cmake(KF6DBusAddons)
 BuildRequires: cmake(LibKWorkspace) >= 5.27.80
-Requires: plasma6-kde-cli-tools
+Requires: kde-cli-tools >= 6.0
 Requires: kirigami-addons
 BuildSystem: cmake
 BuildOption: -DBUILD_QCH:BOOL=ON

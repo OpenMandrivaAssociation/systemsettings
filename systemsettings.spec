@@ -6,7 +6,7 @@
 
 Name: systemsettings
 Version: 6.4.4
-Release: %{?git:0.%{git}.}1
+Release: %{?git:0.%{git}.}2
 %if 0%{?git:1}
 Source0:	https://invent.kde.org/plasma/systemsettings/-/archive/%{gitbranch}/systemsettings-%{gitbranchd}.tar.bz2#/systemsettings-%{git}.tar.bz2
 %else

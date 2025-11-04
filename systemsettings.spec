@@ -45,6 +45,9 @@ BuildOption: -DKDE_INSTALL_USE_QT_SYS_PATHS:BOOL=ON
 # Renamed after 6.0 2025-05-03
 %rename plasma6-systemsettings
 
+# For the map widget used for timezone selection in Date & Time
+Requires:	qml(QtLocation)
+
 %patchlist
 
 %description

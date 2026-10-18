@@ -55,6 +55,7 @@ KDE Plasma 6 system settings panel.
 
 %files -f %{name}.lang
 %{_datadir}/qlogging-categories6/systemsettings.categories
+%{_datadir}/config.kcfg/systemsettings-config.kcfg
 %{_bindir}/systemsettings
 %{_datadir}/systemsettings
 %{_datadir}/metainfo/org.kde.systemsettings.metainfo.xml
